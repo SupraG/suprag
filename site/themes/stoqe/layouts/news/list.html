@@ -1,0 +1,261 @@
+{{ define "main" }}
+<!-- news/list.html -->
+
+{{ partial "bar-dyk-prim" . }}
+
+  {{- range .Params.blocks -}}
+
+      {{- if eq .template "broken-phones" -}}
+        {{ partial "bar/broken-phones" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "recycling-process" -}}
+        {{ partial "bar/recycling-process" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "partnered-with" -}}
+        {{ partial "bar/partnered-with" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "did-you-know" -}}
+        {{ partial "bar/did-you-know" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "recycling-options" -}}
+        {{ partial "bar/recycling-options" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "recycling-hero" -}}
+        {{ partial "bar/recycling-hero" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "what-is-accepted" -}}
+        {{ partial "bar/what-is-accepted" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "stats-bar" -}}
+        {{ partial "blocks/bar-stats" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "partners-bar" -}}
+        {{ partial "bar-partners" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "breadcrumb" -}}
+        {{ partial "breadcrumb" . }}
+      {{- end -}}
+
+      {{- if eq .template "icon-hero" -}}
+        {{ partial "blocks/hero-icons" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "contact-hero" -}}
+        {{ partial "blocks/hero-contact" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "content" -}}
+        {{ partial "blocks/content" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "column" -}}
+        {{ partial "blocks/content-column" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "bar-we-recycle" -}}
+        {{ partial "blocks/bar-we-recycle" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "form-partner" -}}
+        {{ partial "blocks/form-partner" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "form-contact" -}}
+        {{ partial "blocks/form-contact" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "locator" -}}
+        {{ partial "blocks/locator" (dict "Params" .) }}
+      {{- end -}}
+
+  {{- end -}}
+
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Main container -->
+      <div class="columns is-vcentered">
+        <div class="column is-1 is-offset-0 is-vcentered">
+          <span class="icon is-xl has-text-primary">
+            <i class="fal fa-4x fa-newspaper"></i>
+          </span>
+        </div>
+        <div class="column is-9 measure-wide">
+          <h1 class="title">
+            {{ .Title }}
+          </h1>
+          <h2 class="subtitle">
+            <span class="measure-narrow has-text-grey-light">
+              {{ .Params.subtitle }}
+            </span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-12">
+
+          <!--div class="tile is-parent">
+            <article class="tile is-child notification is-primary">
+              <p class="title">Latest News</p>
+              <p class="subtitle">from MobileMuster</p>
+              <div class="content">
+
+              </div>
+            </article>
+          </div-->
+
+          <div class="tile">
+
+            <div class="tile is-parent">
+              {{ range first 1 .Data.Pages }}
+                <article class="tile is-child box">
+
+                  <small class="has-text-grey-light">
+                    {{ dateFormat "02 January, 2006" .Date.Local }}
+                    <span class="icon">
+                      <i class="fas fa-newspaper"></i>
+                    </span>
+                  </small>
+
+                  <p class="subtitle">
+                    <a class="has-text-black" href="{{ .Permalink }}">{{ .Title }}</a>
+                  </p>
+
+                  <hr>
+
+                  
+                  {{ if .Params.custom_summary }}
+                    {{ .Params.custom_summary }}
+                  {{ else if strings.Contains .RawContent "<!--more-->" }}
+                    {{ .Summary | replaceRE "<p>" "<p class=\"mb3\">" | safeHTML }}
+                  {{ else }}
+                    {{ .Summary }}
+                  {{ end }}
+                  <!--a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a-->
+
+                  <br><br>
+
+                  <p>
+                    <a class="">
+                      <span class=""><a href="{{ .Permalink }}">Read More</a></span>
+                      <span class="icon"><i class="fas fa-chevron-circle-right"></i></span>
+                    </a>
+                  </p>
+                </article>
+              {{ end }}
+            </div>
+
+            <div class="tile is-parent is-vertical">
+              {{ range first 2 (after 1 .Data.Pages) }}
+                <article class="tile is-child box">
+                  <small class="has-text-grey-light">
+                    {{ dateFormat "02 January, 2006" .Date.Local }}
+                    <span class="icon">
+                      <i class="fas fa-newspaper"></i>
+                    </span>
+                  </small>
+
+                  <p class="subtitle">
+                    <a class="has-text-black" href="{{ .Permalink }}">{{ .Title }}</a>
+                  </p>
+
+                  <hr>
+
+                  {{ if .Params.custom_summary }}
+                    {{ .Params.custom_summary }}
+                  {{ else if strings.Contains .RawContent "<!--more-->" }}
+                    {{ .Summary | replaceRE "<p>" "<p class=\"mb3\">" | safeHTML }}
+                  {{ else }}
+                    {{ .Summary }}
+                  {{ end }}
+                  
+                  <!--a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a-->
+                  
+
+                  <br><br>
+
+                  <p>
+                    <a class="">
+                      <span class=""><a href="{{ .Permalink }}">Read More</a></span>
+                      <span class="icon"><i class="fas fa-chevron-circle-right"></i></span>
+                    </a>
+                  </p>
+                </article>
+              {{ end }}
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      {{ range (after 3 .Data.Pages) }}  
+      <div class="tile is-ancestor">
+          
+          <div class="tile is-12">
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <small class="has-text-grey-light">
+                  {{ dateFormat "02 January, 2006" .Date.Local }}
+                  <span class="icon">
+                    <i class="fas fa-newspaper"></i>
+                  </span>
+                </small>
+
+                <p class="subtitle">
+                  <a class="has-text-black" href="{{ .Permalink }}">{{ .Title }}.</a>
+                  <small class="ml2">
+                      <a href="{{ .Permalink }}">Read More...</a>
+                      <!--span class="icon"><i class="fas fa-chevron-circle-right"></i></span-->
+                  </small>
+                </p>
+
+                <!--hr-->
+
+                <!--{{ if strings.Contains .RawContent "<!--more--><!--" }}
+                  {{ .Summary | replaceRE "<p>" "<p class=\"mb3\">" | safeHTML }}
+                {{ else }}
+                  {{ .Params.custom_summary }}
+                {{ end }}
+                <a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a-->
+                
+
+                <!--br><br>
+
+                <p>
+                  <a class="">
+                    <span class=""><a href="{{ .Permalink }}">Read More</a></span>
+                    <span class="icon"><i class="fas fa-chevron-circle-right"></i></span>
+                  </a>
+                </p-->
+              </article>
+            </div>
+          </div>
+          
+          </div>
+          {{ end }}
+      </div>
+
+  </div>
+</section>
+
+{{ end }}
+

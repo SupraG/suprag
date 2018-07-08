@@ -1,0 +1,52 @@
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-">
+
+          <div id="" class="algolia content-wrap usa-grid">
+
+            <!-- INTERFACE -->
+            <header>
+              <div id="search-input" class="dn mb3"></div>
+              <div id="search-input-icon" class="dn"></div>
+            </header>
+
+            <main>
+
+
+              <div class="field fl w-50">
+                <p class="">For best results <strong>type your suburb</strong> in the search box below.</p>
+                <p class="control has-icons-left has-icons-right">
+                  <input id="places" class="w-90 input is-primary is-medium" placeholder="Search by Suburb">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </span>
+                </p>
+                <div id="stats" class="dn"></div>
+                <div id="hits"></div>
+                <div id="pagination"></div>
+              </div>
+
+              <div class="fl w-50">
+                <div id="map"></div>
+              </div>
+
+               <div class="dn">
+                 <label>Refine further
+                   <input id="searchBox" />
+                 </label>
+               </div>
+            </main>
+
+               {{ safeHTML "<script type=\"text/html\" id=\"hit-template\"><div class=\"hit\"><div class=\"description body-text hit-content\"><h1 class=\"mb0 b f2 heading hit-name\">{{{_highlightResult.SiteName.value}}}</h1><div class=\"header-description\"><p class=\"mv0\"><span class=\"hit-StreetNumber\">{{{_highlightResult.StreetNumber.value}}}</span> <span class=\"hit-StreetAddress\">{{{_highlightResult.StreetAddress.value}}}</span>, <span class=\"hit-Suburb\">{{{_highlightResult.Suburb.value}}}</span>, <span class=\"hit-State\">{{{_highlightResult.State.value}}}</span> <span class=\"hit-Postcode\">{{{_highlightResult.Postcode.value}}}</span> </span></p></div></div></div></script>" }}
+
+               {{ safeHTML "<script type=\"text/html\" id=\"no-results-template\"><div id=\"no-results-message\" \"class=\"tl\"\"><p>There are no <em>\"{{query}}\"</em> drop-off points. <a href=\"/partners/#become-a-partner\">Become a partner</a></p></div></script>" }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

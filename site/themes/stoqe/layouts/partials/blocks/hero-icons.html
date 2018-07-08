@@ -1,0 +1,40 @@
+<!-- Hero -->
+<section class="hero" id="hero-icons">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Main container -->
+      <div class="columns is-vcentered">
+        <div class="column {{ partial "blocks/meta/bulma-w" .Params.text_width }}">
+
+            {{- with .Params.hero_heading -}}
+              <h1 class="title">
+                {{ markdownify . }}
+              </h1>
+            {{- end -}}
+
+            {{- with .Params.hero_text -}}
+              <h2 class="subtitle">
+                  <span class="has-text-grey-light">
+                    {{ markdownify . }}
+                  </span>
+              </h2>
+            {{- end -}}
+
+        </div>
+
+          <div class="is-hidden-mobile column is-narrow is-vcentered mr4">
+              <span class="icon is-xl has-text-primary">
+                <i class="fa-4x {{ partial "blocks/meta/icons" .Params.icon_1 }} "></i>
+              </span>
+              <span class="icon is-xl has-text-primary">
+                <i class="fa-4x {{ partial "blocks/meta/icons" .Params.icon_2 }} "></i>
+              </span>
+              <span class="icon is-xl has-text-primary">
+                <i class="fa-4x {{ partial "blocks/meta/icons" .Params.icon_3 }} "></i>
+              </span>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>

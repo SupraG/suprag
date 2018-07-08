@@ -1,0 +1,67 @@
+<!-- RECYCLING HERO -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <span class="tag is-light">
+            {{- with .Params.TagIcon -}}
+            <span class="icon">
+              <i class="{{ markdownify . }}"></i>
+            </span>
+            {{- end -}}
+            {{- with .Params.TagText -}}
+            <span class="">{{ markdownify . }}</span>
+            {{- end -}}
+          </span>
+          {{- with .Params.Title -}}
+            <h1 class="title">
+              {{ markdownify . }}
+            </h1>
+          {{- end -}}
+          {{- with .Params.Sentence -}}
+          <h2 class="mt3 subtitle">
+            {{ markdownify . }}
+          {{- end -}}
+          </h2>
+          <p class="">
+            {{- with .Params.ButtonLink -}}
+            <a href="/{{ markdownify . }}/" class="button is-medium is-primary">
+              {{- with .Params.ButtonIcon -}}
+              <span class="icon">
+                <i class="{{ markdownify . }}"></i>
+              </span>
+              {{- end -}}
+              {{- with .Params.ButtonText -}}
+              <span class="">{{ markdownify . }}</span>
+              {{- end -}}
+            </a>
+            {{- end -}}
+          </p>
+          <br>
+          <!--div class="is-divider" data-content="OR"></div-->
+          <div class="columns">
+            <div class="column">
+              <p class="">
+                <a href="/pdf/mobilemuster-mailing-label.pdf" target="_blank" class="is-primary">
+                  <span class="">&nbsp;&nbsp;&nbsp;<span class="has-text-grey-light">Or,</span> download a shipping label</span>
+                  <span class="icon">
+                    <i class="fas fa-print"></i>
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          {{- with .Params.Image -}}
+          <figure class="image box is-marginless">
+            <img src="{{ markdownify . }}">
+          </figure>
+          {{- end -}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

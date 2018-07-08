@@ -1,0 +1,17 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: field_group_list
+  fields:
+  - type: text
+    name: link_name
+    label: Link Name
+    description: Shows in the Menu
+  - type: text
+    name: link_anchor
+    label: Link Anchor
+    description: Links to this section of the page (must be lowercase and use a hyphen
+      instead of spaces)
+  label: Page Submenu Item
+  name: page_submenu_item

@@ -1,0 +1,15 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: textarea
+  name: content
+  label: Content
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: include
+  template: page-submenu-item
+  label: Page Submenu
+  name: page_submenu

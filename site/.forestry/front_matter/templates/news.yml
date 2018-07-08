@@ -1,0 +1,51 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: News Title
+  type: text
+  hidden: false
+  default: ''
+- type: text
+  name: url
+  label: URL
+- type: text
+  name: subtitle
+  label: Subtitle
+- name: date
+  label: Publish Date
+  type: text
+  hidden: false
+  default: ''
+- type: textarea
+  name: custom_summary
+  label: Custom Summary
+  description: 'Custom intro for news article: shows on News homepage only (does not
+    appear on the individual News article page).'
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: blocks
+  template_types:
+  - content-row
+  - column
+  - bar-we-recycle
+  - breadcrumbs
+  - content
+  - form-contact
+  - form-partner
+  - hero-text-icons
+  - locator
+  - partners-bar
+  - stats-bar
+  - icon-heart
+  - icon-hero
+  label: Sections
+  name: blocks
+  description: 'All the different bit-sized chunks that make up a page (ex: Hero section,
+    Icon bar sections, Locator CTA section, Breadcrumb section, etc.). You can now
+    add, remove, and reorder sections for each different page.'
+pages:
+- news/mobile-connections.md

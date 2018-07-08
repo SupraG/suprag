@@ -1,0 +1,9 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: blocks
+  template_types:
+  - column
+  label: column
+  name: column

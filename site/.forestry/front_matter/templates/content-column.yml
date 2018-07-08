@@ -1,0 +1,31 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: field_group_list
+  fields:
+  - type: textarea
+    name: column_content
+    label: Column Content
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: blocks
+    template_types:
+    - form-partner
+    - form-contact
+    label: Forms
+    name: forms
+  label: Column Content
+  name: column_content
+  config:
+    labelField: column_content
+- type: blocks
+  template_types:
+  - locator
+  - form-partner
+  - form-contact
+  - content
+  label: Content Blocks
+  name: content_blocks

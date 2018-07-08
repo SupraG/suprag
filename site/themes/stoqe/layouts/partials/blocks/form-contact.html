@@ -1,0 +1,133 @@
+
+<!-- CONTACT FORM -->
+<section class="hero has-text-primary">
+  <div class="icon-bar hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-6-desktop is-offset-0-desktop">
+
+          <form name="Contact Form" action="/thank-you/" netlify>
+            <div class="field">
+              <label class="label">First Name</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Your first name">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Surname</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Your surname">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </div>
+              <!--p class="help is-success">This username is available</p-->
+            </div>
+
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Your email address" value="">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </div>
+              <!--p class="help is-danger">This email is invalid</p-->
+            </div>
+
+            <div class="field">
+              <label class="label">Subject</label>
+              <div class="control">
+                <div class="select">
+                  <select>
+                    <option>General Enquiry</option>
+                    <option>Media Enquiry</option>
+                    <option>Tech Enquiry</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Type your message here..."></textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  I agree to the <a href="#">terms and conditions</a>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="question">
+                  Yes
+                </label>
+                <label class="radio">
+                  <input type="radio" name="question">
+                  No
+                </label>
+              </div>
+            </div>
+
+            <div netlify-recaptcha></div>
+
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Submit</button>
+              </div>
+              <div class="control">
+                <button class="button is-text">Cancel</button>
+              </div>
+            </div>
+          </form>
+
+          <!--form name="Contact Form" action="/thank-you/" class="w-100 w-80-ns pa1 black" netlify >
+
+            <label for="First Name"><span class="mmgreen">*</span>First Name</label>
+              <input class="usa-input-success" id="First Name" name="First Name" type="text">
+
+            <label for="Surname"><span class="mmgreen">*</span>Surname</label>
+              <input class="usa-input-success" id="Surname" name="Surname" type="text">
+
+            <label for="Email Address"><span class="mmgreen">*</span>Email Address</label>
+              <input class="usa-input-success" id="Email Address" name="Email Address" type="text">
+
+            <label for="Subject">Subject</label>
+              <input class="usa-input-success" id="Subject" name="Subject" type="text">
+
+            <label for="Message">*Message</label>
+            <textarea class="usa-input-success" id="Message" name="Message"></textarea>
+
+            <div netlify-recaptcha></div>
+
+            <div class="button_wrapper">
+              <button type="submit" value="Send Contact Form" class="bggreen usa-button">Submit</button>
+            </div>
+          </form-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

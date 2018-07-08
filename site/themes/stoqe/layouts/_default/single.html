@@ -1,0 +1,102 @@
+{{ define "main" }}
+<!-- _default/single.html -->
+
+        {{ if eq .URL "contact" }}
+          {{ partial "bar-dyk-blk" . }}
+        {{ else if eq .URL "technology" }}
+          {{ partial "bar-dyk-prim-med" . }}
+        {{ else if eq .URL "people" }}
+          {{ partial "bar-dyk-gry-med" . }} 
+        {{ end }}
+
+            {{- range .Params.blocks -}}
+
+              {{- if eq .template "broken-phones" -}}
+                {{ partial "bar/broken-phones" (dict "Params" .) }}
+              {{- end -}}
+            
+              {{- if eq .template "recycling-process" -}}
+                {{ partial "bar/recycling-process" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "partnered-with" -}}
+                {{ partial "bar/partnered-with" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "did-you-know" -}}
+                {{ partial "bar/did-you-know" (dict "Params" .) }}
+              {{- end -}}
+            
+              {{- if eq .template "recycling-options" -}}
+                {{ partial "bar/recycling-options" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "recycling-hero" -}}
+                {{ partial "bar/recycling-hero" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "what-is-accepted" -}}
+                {{ partial "bar/what-is-accepted" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "stats-bar" -}}
+                {{ partial "blocks/bar-stats" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "partners-bar" -}}
+                {{ partial "bar-partners" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "breadcrumb" -}}
+                {{ partial "breadcrumb" . }}
+              {{- end -}}
+
+              {{- if eq .template "icon-hero" -}}
+                {{ partial "blocks/hero-icons" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "contact-hero" -}}
+                {{ partial "blocks/hero-contact" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "content" -}}
+                {{ partial "blocks/content" (dict "Params" .) }}
+              {{- end -}}
+
+              <!--{{- if eq .template "page-submenu-item" -}}
+              {{- end -}}-->
+
+              {{- if eq .template "column" -}}
+                {{ partial "blocks/content-column" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "bar-we-recycle" -}}
+                {{ partial "blocks/bar-we-recycle" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "form-partner" -}}
+                {{ partial "blocks/form-partner" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "form-contact" -}}
+                {{ partial "blocks/form-contact" (dict "Params" .) }}
+              {{- end -}}
+
+              {{- if eq .template "locator" -}}
+                {{ partial "blocks/locator" (dict "Params" .) }}
+              {{- end -}}
+
+            {{- end -}}
+
+            </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+  {{ if eq .URL "contact" }}
+    {{ partial "bar-dyk-blk" . }}
+  {{ end }}
+
+{{ end }}

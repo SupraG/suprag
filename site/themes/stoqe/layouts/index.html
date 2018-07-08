@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <div class="page-blocks">
+    {{- range .Params.blocks -}}
+      {{- if eq .template "stats-bar" -}}
+        {{ partial "blocks/bar-stats" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "partners-bar" -}}
+        {{ partial "blocks/bar-partners" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "icon-hero" -}}
+        {{ partial "blocks/hero-icons" (dict "Params" .) }}
+      {{- end -}}
+
+      {{- if eq .template "content" -}}
+        {{ partial "blocks/content" (dict "Params" .) }}
+      {{- end -}}
+    {{- end -}}
+  </div>
+{{ end }}

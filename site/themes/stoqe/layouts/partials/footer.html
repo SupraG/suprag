@@ -1,0 +1,102 @@
+<!-- FOOTER -->
+<footer class="section is-small">
+  <div class="container">
+      <div class="columns">
+          <div class="column is-7 is-7-widescreen">
+              <div class="summary">
+                  <a class="brand" href="">
+                      <div class="brand-icon"> <img src="{{ relURL .Site.Params.logos.footer }}" alt=" {{ .Site.Title }}" height="100"/> </div>
+                  </a>
+                  <!--div class="brand-content">
+                      <div class="brand-title"> MobileMuster </div>
+                      <div class="brand-subtitle"> Responsible Recyling </div>
+                  </div-->
+
+                  <hr class="spacer is-1">
+                  <p>Established in Melbourne, Australia in 2015.</p>
+                  <hr class="mv3 spacer is-1">
+                  <!--div class="columns">
+                      <div class="column">
+                        <a href="" class="app-store-badge" target="_blank"> <img role="presentation" src="/i/product-stewardship.png"></a>
+                      </div>
+                      <div class="column">
+                        <a href="" class="app-store-badge" target="_blank"> <img role="presentation" src="/i/amta.jpg"></a>
+                      </div>
+                  </div>
+                  <hr class="spacer is-1"-->
+                  <a href="" target="_blank"> {{ .Site.Params.name }} &nbsp;©&nbsp;2018</a>
+                </div>
+          </div>
+          <div class="column is-7 is-6-widescreen is-offset-1-widescreen">
+              <div class="columns">
+                  <!--div class="column is-4">
+                      <div class="menu">
+                          <p class="menu-label"> Menu </p>
+                          <ul class="menu-list">
+                              <li> <a href="">Home</a> </li>
+                              <li> <a href="">Contact</a> </li>
+                          </ul>
+                      </div>
+                  </div-->
+                  <div class="column is-4">
+                      <div class="menu">
+                          <p class="menu-label">Menu</p>
+                          <ul class="menu-list">
+                            {{- range .Site.Menus.main.ByWeight -}}
+                              <a class="navbar-item" title="{{ .Name }}" href="{{ .URL  | relLangURL }}">{{ .Name }}</a>
+                            {{- end -}}
+                            <!--li>
+                                <a href="/recycling/locator/" class="navbar-item">
+                                    <span class="button is- is-primary">
+                                        <span class="icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                        <span class="">Locator <span class=""></span></span>
+                                    </span>
+                                    </a>
+                                </li-->
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="column is-4">
+                      <div class="menu">
+                          <p class="menu-label"> Connect with us </p>
+                          <ul class="menu-list">
+                              <li>
+                                <a href="https://twitter.com/supragenergy" target="_blank">
+                                  <span class="icon is-small"> <i class="fab fa-twitter has-text-link"></i></span>
+                                  <span class="">Twitter</span>
+                                </a>
+                                </li>
+                              <!--li>
+                                <a href="https://www.facebook.com/supragenergy" target="_blank">
+                                  <span class="icon is-small"> <i class="fab fa-facebook-f has-text-link"></i></span>
+                                  <span class="">Facebook</span>
+                                </a>
+                              </li-->
+                              <li>
+                                <a href="https://www.instagram.com/supragenergy/" target="_blank">
+                                  <span class="icon is-small"> <i class="fab fa-instagram has-text-link"></i></span>
+                                  <span class="">Instagram</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://au.linkedin.com/company/supragenergy" target="_blank">
+                                  <span class="icon is-small"> <i class="fab fa-linkedin-in has-text-link"></i></span>
+                                  <span class="">LinkedIn</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/contact/">
+                                  <span class="icon is-small"> <i class="fas fa-at has-text-link"></i></span>
+                                  <span class="">Email</span>
+                                </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>

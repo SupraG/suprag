@@ -1,0 +1,49 @@
+<nav id="primary-nav" role="navigation" class="navbar has-shadow is-transparent" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="{{ "" | absLangURL }}">
+            {{- if .Site.Params.logos -}}
+            <img src="{{ relURL .Site.Params.logos.menu }}" alt=" {{ .Site.Title }}" height="100"/>
+            {{ else }}
+            <span class="site-title is-size-4">{{ .Site.Title }}</span>
+            {{- end -}}
+        </a>
+        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </div>
+    </div>
+    <div id="nav-menu" class="navbar-menu">
+        <div class="navbar-start"></div>
+        <div class="navbar-end">
+            {{- range .Site.Menus.main.ByWeight -}}
+                {{- if .HasChildren -}}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" title="{{ .Name }}" href="{{ .URL  | relLangURL }}?">{{ .Name }}</a>
+                    <div class="navbar-dropdown is-boxed">
+                        {{- range .Children -}}
+                            <a class="navbar-link" title="{{ .Name }}" href="{{ .URL | relLangURL }}?">{{ .Name }}</a>
+                        {{- end -}}
+                    </div>
+                </div>
+                {{- else -}}
+                <a class="navbar-item" title="{{ .Name }}" href="{{ .URL  | relLangURL }}?">{{ .Name }}</a>
+                {{- end -}}
+            {{- end -}}
+
+            {{ partial "nav-social" . }}
+
+            <!--a href="/recycling/locator/" class="navbar-item">
+              <span class="button is- is-primary">
+                <span class="icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+                <span class="">Read Our Research <span class=""></span></span>
+              </span>
+            </a-->
+
+        </div>
+    </div>
+  </div>
+</nav>

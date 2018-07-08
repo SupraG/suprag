@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+  <html lang="{{ .Lang }}">
+      
+    {{ partial "head" . }}
+      
+      <body class="{{ with .IsHome }} home {{ end }}{{ with .IsPage }} page {{ end }}">
+
+        <!-- Responsive Nav Script -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+
+            // Get all "navbar-burger" elements
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+              // Add a click event on each of them
+              $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+
+                  // Get the target from the "data-target" attribute
+                  var target = $el.dataset.target;
+                  var $target = document.getElementById(target);
+
+                  // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                  $el.classList.toggle('is-active');
+                  $target.classList.toggle('is-active');
+
+                });
+              });
+            }
+
+          });
+        </script>
+
+          {{- if ne .Page.Kind "404" -}}
+              {{ partial "nav" . }}
+          {{- end -}}
+
+          {{- if eq .Page.Kind "home" -}}
+            {{ partial "bar-dyk-blk-med" . }}
+            {{ partial "blocks" . }}
+            {{ partial "hero-about" . }}
+            <!--{{ partial "bar-stats" . }}-->
+            {{ partial "hero-partners" . }}
+            {{ partial "hero-about" . }}
+            {{ partial "bar-partners" . }}
+            {{ partial "hero-education" . }}
+            {{ partial "bar-dyk-blk" . }}
+            {{ partial "bar-dyk" . }}
+            {{ partial "bar-dyk-prim" . }}
+            <!--{{ partial "news-latest" . }}-->
+            {{ partial "bar-stats" . }}
+          {{- end -}}
+
+          <main id="primary-content">
+              {{block "main" . }}
+              <!-- _default/baseof.html -->
+              {{ end }}
+          </main>
+
+          {{ partial "footer" . }}
+      </body>
+
+      <script src="/js/main.js" defer></script>
+      <script src="/js/app.js" defer></script>
+
+  </html>

@@ -1,0 +1,66 @@
+<section class="section">
+    <div class="container">
+        <div class="columns flex-r">
+
+            <div class="column is-8">
+                <div class="content">
+                
+                    {{- with .Params.content -}}
+                        <div class="column">
+                            {{ markdownify . }}
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+
+            
+                <!--div class="column is-3 is-offset-1">
+                    <aside class="menu">
+                        <p class="menu-label">
+                        Page Menu
+                        </p>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">
+                                    Page Link
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="#">
+                                        Page Link
+                                    </a>
+                                </li>
+                                <li>
+                                        <a href="#">
+                                            Page Link
+                                        </a>
+                                    </li>
+                        </ul>
+                        <!--p class="menu-label">Administration</p-->
+                        <!--ul class="menu-list">
+                        <li><a>Team Settings</a></li>
+                        <li>
+                            <a class="is-active">Manage Your Team</a>
+                            <ul>
+                            <li><a>Members</a></li>
+                            <li><a>Plugins</a></li>
+                            <li><a>Add a member</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Invitations</a></li>
+                        <li><a>Cloud Storage Environment Settings</a></li>
+                        <li><a>Authentication</a></li>
+                        </ul>
+                        <p class="menu-label">
+                        Site Menu
+                        </p>
+                        <ul class="menu-list">
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        </ul>
+                    </aside>
+                </div-->
+            
+        </div>
+    </div>
+</section>
+

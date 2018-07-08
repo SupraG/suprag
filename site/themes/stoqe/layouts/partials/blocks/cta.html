@@ -1,0 +1,73 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+
+        <div class="column is-6">
+
+          <span class="tag is-light">
+            {{- with .Params.tag_icon -}}
+            <span class="icon">
+              <i class="{{ markdownify . }}"></i>
+            </span>
+            {{- end -}}
+            {{- with .Params.tag_text -}}
+            <span class="ttu">{{ markdownify . }}</span>
+            {{- end -}}
+          </span>
+
+          {{- with .Params.cta_title -}}
+            <h1 class="title">{{ markdownify . }}</h1>
+          {{- end -}}
+          {{ with .Params.cta_subtitle}}
+            <h2 class="mt2 subtitle">{{ markdownify . }}</h2>
+          {{ end }}
+          {{- with .Params.cta_sentence -}}
+            <div class="content">
+                {{ markdownify . }}
+            </div>
+          {{- end -}}
+
+
+            <p class="mb2">
+              <a href="{{- with .Params.button_link -}}{{ markdownify . }}{{- end -}}" class="button is-medium is-primary">
+                {{- with .Params.button_icon -}}
+                  <span class="icon">
+                    <i class="{{ markdownify . }}"></i>
+                  </span>
+                {{- end -}}
+                {{- with .Params.button_text -}}
+                  <span class="">{{ markdownify . }}</span>
+                {{- end -}}
+              </a>
+            </p>
+
+
+
+          <div class="columns">
+            <div class="column">
+              <p class="">
+                <a href="/pdf/mobilemuster-mailing-label.pdf" target="_blank" class="is-primary">
+                  <span class="">&nbsp;&nbsp;&nbsp;<span class="has-text-grey-light">Or,</span> download a shipping label</span>
+                  <span class="icon">
+                    <i class="fas fa-print"></i>
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+          <div class="column is-6">
+            {{- with .Params.cta_image -}}
+              <figure class="image box is-marginless">
+                <img src="/uploads/{{ markdownify . }}">
+              </figure>
+            {{- end -}}
+          </div>
+
+
+    </div>
+</section>

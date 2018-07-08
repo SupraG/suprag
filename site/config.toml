@@ -1,0 +1,70 @@
+baseurl = "/"
+defaultContentLanguage = "en"
+destination = "../dist/"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+enableEmoji = true
+hrefTargetBlank = false
+languageCode = "en-us"
+languageLang = "en"
+paginate = "20"
+relativeURLs = false
+theme = "stoqe"
+title = "SupraG Energy"
+[[menu.main]]
+name = "Technology"
+url = "/technology/"
+weight = 1
+[[menu.main]]
+name = "People"
+url = "/people/"
+weight = 2
+[[menu.main]]
+name = "News"
+url = "/news/"
+weight = 3
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 4
+[params]
+site_description = "Next Gen Energy Storage Solutions"
+name = "SupraG"
+site_title_l = "SupraG Energy"
+[params.brandcolor]
+dark = "#1A1A59"
+green = "#F17A00"
+light = "#565695"
+shadow = "#09093B"
+[params.icons]
+building = "building"
+facebook = "facebook"
+graduation-cap = "graduation-cap"
+heartbeat = "heartbeat"
+instagram = "instagram"
+linkedin = "linkedin"
+lock = "lock"
+map_marker_alt = "map-marker-alt"
+map_pin = "map-pin"
+mobile = "mobile"
+print = "print"
+recycle = "recycle"
+shield = "shield"
+trash = "trash"
+twitter = "twitter"
+university = "university"
+accusoft = "accusoft"
+[params.iconstyle]
+brand = "fab"
+light = "fal"
+regular = "far"
+solid = "fas"
+[params.logos]
+small = ""
+large = ""
+menu = "logo-blk.png"
+footer = "logo.png"
+[params.social]
+facebook = ""
+instagram = ""
+linkedin = ""
+twitter = ""

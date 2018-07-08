@@ -1,0 +1,51 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  name: hero_heading
+  label: Hero Heading
+  default: MobileMuster is a safe, secure, and ethical phone recycling program
+- type: text
+  name: hero_text
+  label: Hero Text
+  default: We recycle all mobile phones, their batteries, chargers, tablets, smart
+    watches, and accessories
+- type: number
+  name: text_width
+  label: 'Hero Text Column Width '
+  description: 'By default a Page is 12 equal-columns wide. You can nominate how wide
+    you want the Hero text for each page by simply enter a whole number between 1-12
+    which represent how many of the 12 columns you want the Hero text to extend. For
+    Example: if you enter ''6'' then the Hero text extends 6 columns wide (out of
+    12 columns; therefore it''s 50% of the page width).'
+  default: '7'
+  config:
+    max: '9'
+- type: select
+  name: icon_1
+  config:
+    source:
+      type: datafiles
+      file: site-params
+      path: icons
+  label: icon 1
+  default: recycle
+- type: select
+  name: icon_2
+  config:
+    source:
+      type: datafiles
+      file: site-params
+      path: icons
+  label: Icon 2
+  default: trash
+- type: select
+  name: icon_3
+  config:
+    source:
+      type: datafiles
+      file: site-params
+      path: icons
+  label: Icon 3
+  default: heartbeat

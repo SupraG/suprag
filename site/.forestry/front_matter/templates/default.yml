@@ -1,0 +1,53 @@
+---
+hide_body: false
+is_partial: true
+fields:
+- name: title
+  label: Page Title
+  type: text
+  hidden: false
+  default: ''
+- type: text
+  name: url
+  label: Page Address
+- type: blocks
+  template_types:
+  - we-recycle
+  - broken-phones
+  - did-you-know
+  - partnered-with
+  - recycling-process
+  - recycling-options
+  - recycling-hero
+  - what-is-accepted
+  - content-row
+  - column
+  - bar-we-recycle
+  - breadcrumbs
+  - content
+  - form-contact
+  - form-partner
+  - hero-text-icons
+  - locator
+  - partners-bar
+  - stats-bar
+  - icon-hero
+  label: Sections
+  name: blocks
+  description: 'All the different bit-sized chunks that make up a page (ex: Hero section,
+    Icon bar sections, Locator CTA section, Breadcrumb section, etc.). You can now
+    add, remove, and reorder sections for each different page.'
+- name: date
+  label: Publish Date
+  type: text
+  hidden: true
+  default: ''
+pages:
+- thank-you.md
+- recycling.md
+- partners.md
+- locator.md
+- _index.md
+- education.md
+- contact.md
+- news/_index.md

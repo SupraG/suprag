@@ -1,0 +1,56 @@
++++
+date = "2018-05-18T17:48:58+10:00"
+slug = "about"
+title = "About"
+type = "page"
+url = "about"
+[[blocks]]
+hero_heading = "SupraG Energy is a graphene technology development and commercialization company."
+hero_text = "Established in Melbourne, Australia in 2015."
+icon_1 = "print"
+icon_2 = "lock"
+icon_3 = "shield"
+template = "icon-hero"
+text_width = "7"
+[[blocks]]
+icon_1 = "recycle"
+icon_1_bottom_text = "Items Recycled"
+icon_1_top_text = "11 Million"
+icon_2 = "trash"
+icon_2_bottom_text = "Saved from Landfill"
+icon_2_top_text = "1,323 Tonnes"
+icon_3 = "heartbeat"
+icon_3_bottom_text = "Recovery rate"
+icon_3_top_text = "99%"
+icon_4 = "building"
+icon_4_bottom_text = "Drop-off Points"
+icon_4_top_text = "3,500+"
+template = "stats-bar"
+[[blocks]]
+content = "SupraG Energy is a graphene technology development and commercialization company, established in Melbourne, Australia in 2015. SupraG Energy has exclusive access to two patent families covering the preparation of graphene hydrogel membranes and their applications in energy storage areas. SupraG Energy now focuses on pilot scale validation of graphene technologies and the commercialization of new materials and technologies for next generation of energy storage devices, including supercapacitors.\n\nSupraG Energy aims to bridge the gap between innovation and commercial application of novel carbon-based nanomaterials. With several years’ experience in graphene R&D, the innovation at SupraG has demonstrated the capabilities of scalable synthesis of graphene films as well as their enabled applications in energy storage areas. The SurpaG research team is currently focused on scaling up the fabrication of graphene hydrogel films and prototyping energy storage devices.\n\nSupraG’s industrial partner, Tangshan Jianhua Industrial Group, has a production capacity of graphene of about 100 tons per year, as well as leading expertise in nanomaterial processing field. By combining advanced research and engineering capabilities, SupraG is committed to the successful commercialization of graphene technologies to address global energy issues. Our vision is to provide advanced technology commercialization solutions of novel materials technologies."
+template = "content"
+[[blocks.page_submenu_item]]
+link_anchor = "overviews"
+link_name = "Overview"
+[[blocks.page_submenu_item]]
+link_anchor = "members"
+link_name = "Members"
+[[blocks.page_submenu_item]]
+link_anchor = "product-stewardship"
+link_name = "Product Stewardship"
+[[blocks]]
+icon_1 = "recycle"
+icon_1_bottom_text = "Items Recycled"
+icon_1_top_text = "11 Million"
+icon_2 = "trash"
+icon_2_bottom_text = "Saved from Landfill"
+icon_2_top_text = "1,323 Tonnes"
+icon_3 = "heartbeat"
+icon_3_bottom_text = "Recovery rate"
+icon_3_top_text = "99%"
+icon_4 = "building"
+icon_4_bottom_text = "Drop-off Points"
+icon_4_top_text = "3,500+"
+template = "stats-bar"
+
++++
